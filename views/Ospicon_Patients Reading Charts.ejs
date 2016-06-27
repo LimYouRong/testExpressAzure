@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Ospicon Systems </title>
+
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    
+    <!-- Custom Theme Style -->
+    <link href="../Webpages/css/custom.css" rel="stylesheet">
+
+
+      <script   src="../Webpages/js/jquery-2.2.3.min.js"></script>
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Ospicon Systems</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile">
+              <div class="profile_pic">
+                <img src="../Webpages/images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>Dr Peter Leong</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-home"></i> Dashboard </a>                    
+                  </li>
+
+                  <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="form.html">Medical Leave Form</a>
+                      </li>
+                      <li><a href="form_advanced.html">Speacial Care Treatment</a>
+                      </li>
+                      <li><a href="form_validation.html">Transfered Patients</a>
+                      </li>                      
+                    </ul>
+                  </li>
+              
+                  <li><a><i class="fa fa-table"></i> Schedule <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="tables.html">Patient Consultations</a>
+                      </li>
+                      <li><a href="tables_dynamic.html">Community Meeting</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-bar-chart-o"></i> About Us </a>                    
+                  </li>
+                </ul>
+              </div>
+             
+
+            </div>
+            <!-- /sidebar menu -->
+
+            
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+
+          <div class="nav_menu">
+            <nav class="" role="navigation">
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="../Webpages/images/img.jpg" alt="">Dr Peter Leong
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;">  Profile</a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">Help</a>
+                    </li>
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                    </li>
+                  </ul>
+                </li>
+
+              
+
+              </ul>
+            </nav>
+          </div>
+
+        </div>
+        <!-- /top navigation -->
+
+        <div id="charts-top" class="tbls-stngs"> 
+
+          <h2>Name: Mr.Tan </h2>
+            <li><a href="/BPM/25">Next Page</a></li>
+      	   <div id="hbm" onclick="location.href='/views/BPM.ejs'">
+
+           </div>
+
+           	<div id="o2">
+
+            </div> <!--End of charts -->
+
+           <div id="glucose">
+          
+           </div>
+
+        </div>
+
+        <div id="charts-bottom" >
+            <div id="temp">      
+         
+            </div>
+
+            <div id="weight">
+
+            </div>
+
+        </div>
+
+    </div>
+        </div>
+
+
+    
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="../Webpages/js/custom.js"></script>
+ 	<!-- Using HighChart -->
+	<script src="../Webpages/js/hcharts/highcharts.js"></script>
+	<script src="../Webpages/js/hcharts/exporting.js"></script>
+
+
+
+	<script>
+		$(function () {
+    $('#hbm').highcharts({
+        title: {
+            text: 'Blood Presure Meter',
+            x: -20 //center
+        },
+        subtitle: {
+            text: 'Monthly Readings',
+            x: -20
+        },
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            title: {
+                text: 'HBM'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: ''
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Diastolic',
+            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+        }, {
+            name: 'Systolic',
+            data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+        }, {
+            name: 'Heart-rate',
+            data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+        }]
+    });
+});
+  <!-- End of HBM Chart -->
+
+$(function () {
+    $('#o2').highcharts({
+        title: {
+            text: 'Oxygen',
+            x: -20 //center
+        },
+        subtitle: {
+            text: 'O2 level Readings',
+            x: -20
+        },
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            title: {
+                text: 'HBM'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: ''
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Oxygen',
+            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 18.2, 23.3, 18.3, 21.5, 9.6]
+        }]
+    });
+});
+
+    $(function () {
+    $('#glucose').highcharts({
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: 'Gulcose Readings'
+        },
+        subtitle: {
+            text: 'Monthly Records'
+        },
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            title: {
+                text: 'ml/dL'
+            }
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: true
+                },
+                enableMouseTracking: false
+            }
+        },
+        series: [{
+            name: 'Glucose',
+            data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+        }]
+    });
+});
+    
+$(function () {
+    $('#temp').highcharts({
+        title: {
+            text: 'Temperature Readings',
+            x: -20 //center
+        },
+        subtitle: {
+            text: 'O2 level Readings',
+            x: -20
+        },
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            title: {
+                text: '°C'
+            },
+            plotLines: [{
+                value: 37,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: '°C'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Temperature',
+            data: [37.0, 36.9, 36.5, 37.5, 37.2, 37.5, 38.2, 37.2, 36.9, 37.3, 37.5, 37.6]
+        }]
+    });
+});
+
+
+
+$(function () {
+    $('#weight').highcharts({
+        title: {
+            text: 'Weight Readings',
+            x: -20 //center
+        },
+        subtitle: {
+            text: 'Body Weight',
+            x: -20
+        },
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            title: {
+                text: 'Weight'
+            },
+            plotLines: [{
+                value: 70,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: 'Kg'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'weight',
+            data: [68.0, 69.9, 68.5, 68.5, 69.2, 67.5, 67.2, 70.2, 70.9, 70.3, 70.5, 70.6]
+        }]
+    });
+});
+	</script>
+
+
+  </body>
+</html>

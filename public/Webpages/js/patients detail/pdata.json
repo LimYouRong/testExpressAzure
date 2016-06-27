@@ -1,0 +1,10 @@
+{"data":[
+	{"pid":"001", "pname":"Mr.Tan", "pnric":"S7654321Q", "psys":"110", "pdio":"30", "phb":"55"},
+	{"pid":"002", "pname":"Mr.Ramu Sammy", "pnric":"S7654322A", "psys":"100", "pdio":"40", "phb":"45"},
+	{"pid":"003", "pname":"Mr.Ismail Rahman", "pnric":"S7654323Z", "psys":"98", "pdio":"70", "phb":"75"},
+	{"pid":"004", "pname":"Mr.Victor Seng", "pnric":"S7654324V", "psys":"80", "pdio":"70", "phb":"65"},
+	{"pid":"005", "pname":"Mr.Ganesh Murthy", "pnric":"S7654325Q", "psys":"111", "pdio":"40", "phb":"75"},
+	{"pid":"006", "pname":"Mr.Aloysius Lim", "pnric":"S7654326A", "psys":"99", "pdio":"50", "phb":"85"},
+	{"pid":"007", "pname":"Mrs. Jenny Chia", "pnric":"S7654327Z", "psys":"105", "pdio":"60", "phb":"65"},
+	{"pid":"008", "pname":"Mrs. Ashlyn Jones", "pnric":"S7654328V", "psys":"103", "pdio":"80", "phb":"67"}
+]}

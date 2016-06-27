@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/loginstyle.css' />
+    <script src="/javascripts/jquery-2.2.3.min.js"></script>
+  </head>
+  <body>
+      <div class="container">
+        <div class="card card-container">
+          <img id="profile-img" class="profile-img-card" src="images/user.png" />
+          <p id="profile-name" class="profile-name-card"></p>
+          <form class="form-signin" action="/login" method="post">
+            <span id="reauth-email" class="reauth-email"></span>
+            <input type="text" id="username" name="username" class="form-control" placeholder="Email address" required autofocus>
+
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+
+            <li><a href="/dashboard">Next Page</a></li>
+
+            <div id="remember" class="checkbox">
+              <label>
+                <input type="checkbox" value="remember-me"> Remember me
+              </label>
+            </div>
+                       <div>
+                <input id="login" class="btn btn-lg btn-primary btn-block btn-signin" type="submit" value="Submit" />
+            </div>
+          </form><!-- /form -->
+          <a href="#" class="forgot-password">
+            Forgot the password?
+          </a>
+
+        </div>
+      </div>
+      <!--<script>-->
+      <!--$('#login').on('click',function(event){-->
+      <!--alert("Click");-->
+      <!--$.ajax({-->
+      <!--type:'POST',-->
+      <!--url:'/login'-->
+      <!--}).done(function(data,textStatus,jqXHR){-->
+      <!--console.log(data);-->
+      <!--})-->
+      <!--})-->
+      <!--</script>-->
+
+  </body>
+
+</html>
